@@ -1,0 +1,6 @@
+function digPow(n, p){
+    let ans = (''+n).split('') //it's another syntax how to from num do string
+        .map(function(d,i){return Math.pow(+d,i+p) })
+        .reduce(function(s,v){return s+v}) / n
+    return ans % 1 ? -1 : ans
+}
