@@ -1,0 +1,6 @@
+function digPow(n, p) {
+    var x = String(n)
+        .split("") //n became ["8", "9"]
+        .reduce((s, d, i) => s + Math.pow(d, p + i), 0) // d is num + p degree and plus index each operation
+    return x % n ? -1 : x / n //remainder of division !== 0 we return -1, else we return res x / n
+}
