@@ -1,0 +1,8 @@
+//Tribonaccis is when every next num is sum of prev 3 elements
+
+function tribonacci(signature,n){  
+  for (var i = 0; i < n-3; i++) { // iterate n times
+    signature.push(signature[i] + signature[i+1] + signature[i+2]); //its sum of elements.
+  }
+  return signature.slice(0, n); //return trib - length of n
+}
